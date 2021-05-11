@@ -27,10 +27,10 @@ RUN apt-get install --yes && \
         pillow==7.2.0 \
         clang==6.0.0
 
-RUN wget --quiet https://developer.arm.com/-/media/Files/downloads/gnu-rm/6-2017q2/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2 -O - \
+RUN wget --quiet https://launchpad.net/gcc-arm-embedded/4.7/4.7-2013-q3-update/+download/gcc-arm-none-eabi-4_7-2013q3-20130916-linux.tar.bz2 -O - \
         | tar -xj -C /opt
 
-ENV PATH=/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/:${PATH}
+ENV PATH=/opt/gcc-arm-none-eabi-4_7-2013q3/bin/:${PATH}
 
 # Workaround for "libQt5Core.so.5 not found" issue
 # see https://www.gitmemory.com/issue/Microsoft/WSL/3023/488329451
